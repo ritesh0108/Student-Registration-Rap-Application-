@@ -1,0 +1,17 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'CDS FOR STUDENT TB'
+@Metadata.ignorePropagatedAnnotations: true
+define root view entity ZCDS_STUDENT
+  as select from ztb_student
+{
+  key id             as Id,
+      firstname      as Firstname,
+      lastname       as Lastname,
+      course         as Course,
+      age            as Age,
+      gender         as Gender,
+      courseduration as Courseduration,
+      status         as Status,
+      dob            as Dob
+}
