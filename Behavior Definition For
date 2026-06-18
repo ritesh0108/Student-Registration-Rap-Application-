@@ -1,0 +1,27 @@
+managed implementation in class zbp_cds_student unique;
+strict ( 2 );
+
+define behavior for ZCDS_STUDENT //alias <alias_name>
+persistent table ztb_student
+lock master
+authorization master (global)
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Id;
+
+  mapping for ztb_student
+  {
+          Id         = id;
+      Firstname      = firstname;
+      Lastname       = lastname;
+      Course         = course;
+      Age            = age;
+      Gender         = gender;
+      Courseduration = courseduration;
+      Status         = status;
+      Dob            = dob;
+  }
+}
