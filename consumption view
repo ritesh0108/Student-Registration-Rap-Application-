@@ -1,0 +1,27 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'CONSUMPTION VIEW FOR STUDENT APP'
+@Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
+define root view entity ZC_CDS_STUDENT
+  provider contract transactional_query as projection on ZCDS_STUDENT as Student
+{
+    @EndUserText.label: 'Student Id'
+    key Id,
+    @EndUserText.label: 'Firstname'
+    Firstname,
+    @EndUserText.label: 'Lastname'
+    Lastname,
+    @EndUserText.label: 'Course'
+    Course,
+    @EndUserText.label: 'Age'
+    Age,
+    @EndUserText.label: 'Gender'
+    Gender,
+    @EndUserText.label: 'Course Duration'
+    Courseduration,
+    @EndUserText.label: 'Status'
+    Status,
+    @EndUserText.label: 'Dob'
+    Dob
+}
